@@ -38,13 +38,7 @@ guess_number_game/
 │ │ └── application.properties
 ├── pom.xml
 └── README.md
-
-yaml
-Copy
-Edit
-
 ---
-
 ## ▶️ Run Locally
 
 ### Prerequisites
@@ -59,7 +53,7 @@ cd guess-number-game
 ./mvnw spring-boot:run
 App will run at: http://localhost:8080
 
-## 🧪 Sample Usage
+### 🧪 Sample Usage
 Open http://localhost:8080
 
 Enter a number between 1 and 100
@@ -72,9 +66,17 @@ Get feedback like:
 
 "Correct! You guessed it in X tries."
 
+---
+
 ## 📸 Screenshots
 
+![Game Start](src/main/resources/images/Screenshot%20from%202025-06-08%2001-52-17.png)
+*Game start screen*
 
+![Guess Correct](src/main/resources/images/Screenshot%20from%202025-06-08%2001-52-44.png)
+*Feedback after a guess*
+
+---
 
 ## 📬 Contact
 Developer: Deepak Kumar
