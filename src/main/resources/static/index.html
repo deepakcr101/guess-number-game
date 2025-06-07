@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Guess The Number</title>
+  <style>
+    body { font-family: Arial; text-align: center; padding: 30px; }
+    input, button, select { padding: 10px; margin: 10px; }
+    #response { font-weight: bold; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h1>🎮 Guess The Number Game</h1>
+
+  <label for="level">Select Difficulty:</label>
+  <select id="level">
+    <option value="easy">Easy (1-50)</option>
+    <option value="medium">Medium (1-100)</option>
+    <option value="hard">Hard (1-200)</option>
+  </select>
+  <button onclick="startGame()">Start Game</button>
+
+  <br><br>
+  <input type="number" id="guessInput" placeholder="Your guess" />
+  <button onclick="makeGuess()">Submit Guess</button>
+
+  <p id="response"></p>
+
+  <script>
+    function startGame() {
+      const level = document.getElementById("level").value;
+      fetch(`/api/game/start?level=${level}`, { method: 'POST' })
+        .then(res => res.text())
+        .then(text => document.getElementById("response").innerText = text);
+    }
+
+    function makeGuess() {
+      const guess = document.getElementById("guessInput").value;
+      fetch(`/api/game/guess?guess=${guess}`, { method: 'POST' })
+        .then(res => res.text())
+        .then(text => document.getElementById("response").innerText = text);
+    }
+  </script>
+</body>
+</html>
