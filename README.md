@@ -84,10 +84,3 @@ Feel free to connect or give feedback!
 
 ## 📄 License
 This project is open-source and free to use under the MIT License.
-
-Let me know if you'd like:
-- A matching `LICENSE` file
-- A `demo.webm` or GIF for the UI
-- A badge-filled GitHub README version
-
-Happy coding! 💻🔥
